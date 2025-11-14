@@ -3,9 +3,6 @@ query ($id: [ID]) {
     edges {
       node {
         id
-        name {
-          value
-        }
         primary_address {
           node {
             address {
