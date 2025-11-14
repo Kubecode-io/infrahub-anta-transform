@@ -1,8 +1,11 @@
-query ($id: [ID]) {
-  AvdLeafswitch(ids: $id) {
+query ($name: String) {
+  AvdLeafswitch(name__value: $name) {
     edges {
       node {
         id
+        name {
+          value
+        }
         primary_address {
           node {
             address {

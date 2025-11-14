@@ -2,12 +2,12 @@ from infrahub_sdk.transforms import InfrahubTransform
 import json
 import requests
 import time
-class DeviceConfigTransform(InfrahubTransform):
-    query = "check_switch_query"
+class Transform(InfrahubTransform):
+    query = "switch_check_query"
     async def transform(self, data):
         device = data["AvdLeafswitch"]["edges"][0]["node"]
         device_name = device["name"]["value"]
-        device_primary_address = device["primary_address"]["node"]["address"]["value"]
+        device_primary_address = device["primary_address"]["node"]["address"]["value"].split("/")[0]
 
         s = requests.Session()
         kriten_url = "http://kriten-dev.192.168.10.190.nip.io/api/v1/jobs/"
