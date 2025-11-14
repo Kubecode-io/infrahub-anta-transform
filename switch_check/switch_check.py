@@ -3,7 +3,7 @@ import json
 import requests
 import time
 class DeviceConfigTransform(InfrahubTransform):
-    query = "device_config_query"
+    query = "check_switch_query"
     async def transform(self, data):
         device = data["AvdLeafswitch"]["edges"][0]["node"]
         device_name = device["name"]["value"]
