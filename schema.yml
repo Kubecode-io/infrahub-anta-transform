@@ -28,6 +28,11 @@ nodes:
       - DcimGenericDevice
       - CoreArtifactTarget
     attributes:
+      - name: name
+        kind: Text
+        label: Name
+        optional: false
+        unique: true
       - name: node_id
         kind: Number
       - name: serial_number
