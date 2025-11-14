@@ -1,18 +1,51 @@
 ---
 version: "1.0"
 nodes:
-  - name: Device
-    namespace: Kube
+#   - name: Device
+#     namespace: Kube
+#     display_labels: ["name__value"]
+#     inherit_from:
+#       - CoreArtifactTarget
+#     attributes:
+#       - name: name
+#         kind: Text
+#         label: Name
+#         optional: false
+#         unique: true
+#       - name: description
+#         kind: Text
+#         label: Description
+#         optional: true
+
+  - name: Leafswitch
+    namespace: Avd
+    human_friendly_id: ["name__value"]
     display_labels: ["name__value"]
+    icon: clarity:network-switch-solid
+    label: AVD Leaf Switch
+    menu_placement: "AvdNodegroup"
     inherit_from:
+      - DcimGenericDevice
       - CoreArtifactTarget
     attributes:
-      - name: name
+      - name: node_id
+        kind: Number
+      - name: serial_number
         kind: Text
-        label: Name
-        optional: false
-        unique: true
-      - name: description
-        kind: Text
-        label: Description
         optional: true
+      - name: uplink_interfaces
+        kind: List
+        default_value: ["Ethernet49/1", "Ethernet50/1"]
+      - name: mlag_interfaces
+        kind: List
+        default_value: ["Ethernet51/1", "Ethernet52/1"]
+    relationships:
+      - name: nodegroup
+        peer: AvdNodegroup
+        cardinality: one
+        kind: Parent
+        optional: false
+      - name: uplink_switch_interfaces
+        peer: DcimInterfaceL3
+        cardinality: many
+        kind: Generic
