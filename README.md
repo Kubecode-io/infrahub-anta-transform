@@ -8,7 +8,7 @@ They can be used by Infrahub to create artifacts which will run a Kriten job.
 Set env vars to connect to infrahub:
 ```
 export INFRAHUB_ADDRESS="http://192.168.10.59:8000"
-export INFRAHUB_API_TOKEN="187dc0fa-6d50-e349-2d41-c51b383ace73"
+export INFRAHUB_API_TOKEN="187e1116-9c18-0d09-3862-c51320cdb9b7"
 source venv/bin/activate
 ```
 
