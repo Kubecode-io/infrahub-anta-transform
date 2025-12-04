@@ -1,7 +1,7 @@
 # infrahub-transform
 
 This repo contains python transform, query and artifact defintions.
-They can be used by Infrahub to create artifacts wihic will run a Kriten job.
+They can be used by Infrahub to create artifacts which will run a Kriten job.
 
 ## Testing
 
