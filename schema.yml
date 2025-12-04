@@ -4,7 +4,7 @@ nodes:
   - name: Leafswitch
     namespace: Avd
     human_friendly_id: ["name__value"]
-    display_labels: ["name__value"]
+    display_label: "{{ name__value }}"
     icon: clarity:network-switch-solid
     label: AVD Leaf Switch
     menu_placement: "AvdNodegroup"
@@ -12,11 +12,6 @@ nodes:
       - DcimGenericDevice
       - CoreArtifactTarget
     attributes:
-      - name: name
-        kind: Text
-        label: Name
-        optional: false
-        unique: true
       - name: node_id
         kind: Number
       - name: serial_number
