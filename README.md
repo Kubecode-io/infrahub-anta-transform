@@ -1,4 +1,4 @@
-# infrahub-transform
+# infrahub-anta-transform
 
 This repo contains python transform, query and artifact defintions.
 They can be used by Infrahub to create artifacts which will run a Kriten job.
