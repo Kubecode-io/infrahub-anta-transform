@@ -1,4 +1,4 @@
-# infrahub-transform
+# infrahub-anta-transform
 
 This repo contains python transform, query and artifact defintions.
 They can be used by Infrahub to create artifacts wihic will run a Kriten job.
@@ -17,7 +17,6 @@ Run infrahubctl:
 infrahubctl transform switch_check_transform id="1875c944-b74a-8267-2d7c-c51385b22eb6"
 ```
 
-
 ## Instructions
 
 Make sure the object that contains the artifact inherits from CoreArtifactTarget (See schema.yml)
@@ -27,3 +26,5 @@ Group name must match "targets" in artifact definition in .infrahub.yml
 Add switches as members of the group
 
 Add this repository in Infrahub -> Integrations > Git Repositories
+
+Kriten job runs anta_runner.py from https://github.com/Kubecode-io/infrahub-anta-demo
