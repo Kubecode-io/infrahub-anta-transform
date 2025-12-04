@@ -11,6 +11,6 @@ artifact_definitions:
     artifact_name: "switch_check"
     parameters:
       name: "name__value"
-    content_type: "text/plain"
+    content_type: "application/json"
     targets: "avd_leaf_switches"
     transformation: "switch_check_transform"
